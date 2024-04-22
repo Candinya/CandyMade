@@ -1,13 +1,18 @@
 import Hero from "@/components/Hero";
+import ProjectCard from "@/components/ProjectCard";
+import { AllProjectsBasic } from "@/projects";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center p-8 md:p-16">
-      <Hero />
+const Home = () => (
+  <main className="flex min-h-screen flex-col items-center p-8">
+    <Hero />
 
-      <div className="mb-32 grid grid-cols-1 text-center md:grid-cols-2 lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left">
-        {/*Project Cards*/}
-      </div>
-    </main>
-  );
-}
+    <div className="grid grid-cols-1 gap-4 w-full max-w-lg lg:max-w-4xl lg:grid-cols-2 2xl:max-w-7xl 2xl:grid-cols-3">
+      {/*Project Cards*/}
+      {AllProjectsBasic.map((project) => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
+    </div>
+  </main>
+);
+
+export default Home;

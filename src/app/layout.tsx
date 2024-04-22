@@ -8,7 +8,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "CandyMade",
   description: "Projects made by Candy",
-  icons: "/logos/candymade.svg",
+  icons: "/assets/logos/candymade.svg",
+  metadataBase: new URL("https://candymade.net"),
+  authors: {
+    name: "Nya Candy",
+    url: "https://ncd.moe",
+  },
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => (

@@ -1,19 +1,28 @@
-export type ProjectType = "Application" | "Web" | "Platform" | "Other";
-export type ProjectState = "Developing" | "Published" | "Archived";
+export type ProjectType =
+  | "Desktop"
+  | "Mobile"
+  | "AllPlatform"
+  | "Web"
+  | "Other";
+export type ProjectPlatform = "Windows" | "macOS" | "Linux" | "Android" | "iOS";
 
 export type ProjectBasicInfo = {
   id: string;
   name: string;
   slogan: string;
   logo: string;
-  type: ProjectType;
-  isOpenSource: boolean;
   sourceRepo: string | null;
   startFrom: Date;
-  state: ProjectState;
+  type: ProjectType;
+  isPublished: boolean;
 };
 
-export type VersionHistory = {
+export type ProjectScreenShot = {
+  imageUrl: string;
+  title: string;
+};
+
+export type ProjectVersionHistory = {
   version: string;
   releaseDate: Date;
   releaseNote: string;
@@ -21,9 +30,10 @@ export type VersionHistory = {
 
 export type ProjectDetailedInfo = ProjectBasicInfo & {
   introduction: string;
+  platforms: ProjectPlatform[];
   techStacks: string[];
   languages: string[];
-  screenshots: string[];
+  screenshots: ProjectScreenShot[];
   downloadLink: string | null;
-  versionHistory: VersionHistory[];
+  versionHistory: ProjectVersionHistory[];
 };

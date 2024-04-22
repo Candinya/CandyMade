@@ -6,6 +6,7 @@ const fillSpecialRed = {
   fill: "#e14652",
 };
 
+// 想做动画效果，但不好做，以后再说吧
 const TextLogo = () => (
   <svg
     width="100%"

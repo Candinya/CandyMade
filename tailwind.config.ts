@@ -18,6 +18,13 @@ const config: Config = {
         "special-orange": "#F59C21",
         "special-blue": "#369CE8",
       },
+      rotate: {
+        "30": "30deg",
+        "60": "60deg",
+      },
+      height: {
+        "128": "32rem",
+      },
     },
   },
   plugins: [],

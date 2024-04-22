@@ -1,9 +1,9 @@
 import TextLogo from "@/components/TextLogo";
 
 const Hero = () => (
-  <div className="px-6 py-16 md:py-24 lg:px-8">
+  <div className="px-6 py-8 lg:px-8 lg:py-12">
     <div className="mx-auto max-w-2xl text-center">
-      <div className="w-72 md:w-96">
+      <div className="w-72 lg:w-96">
         <TextLogo />
       </div>
       <p className="mt-6 text-xl leading-8 text-gray-600">
