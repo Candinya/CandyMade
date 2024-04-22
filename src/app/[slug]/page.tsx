@@ -43,7 +43,7 @@ const TagPill = ({ beforeContent, className, children }: TagPillProps) => (
 const DetailedMisc = ({ projectDetails }: PartialProps) => (
   <div className="grid grid-cols-1 lg:grid-cols-3 divide-x divide-dashed">
     {/*详细介绍*/}
-    <div className="col-span-2 px-6 py-4 border-l-8 border-gray-200">
+    <div className="col-span-2 px-6 py-4 my-4 border-l-8 border-gray-200">
       <p className="whitespace-pre-wrap">
         {projectDetails.introduction.trim()}
       </p>
@@ -124,7 +124,7 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
   const projectDetails = AllProjectsIDMap[slug];
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-8 lg:p-16">
+    <main className="flex min-h-screen flex-col items-center p-8 lg:pt-16">
       <div className="w-full max-w-lg lg:max-w-4xl 2xl:max-w-7xl 2xl:grid-cols-3">
         {/*LOGO 和 标题*/}
         <LogoTitle projectDetails={projectDetails} />
@@ -156,6 +156,19 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
             </>
           )}
         </div>
+      </div>
+
+      {/*页脚信息*/}
+      <div className="mt-12 text-sm text-gray-400 w-full text-center">
+        由{" "}
+        <a
+          className="underline underline-offset-2"
+          href="https://candymade.net"
+          target="_blank"
+        >
+          CandyMade
+        </a>{" "}
+        强力驱动
       </div>
     </main>
   );
