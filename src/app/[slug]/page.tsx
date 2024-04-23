@@ -29,12 +29,11 @@ const LogoTitle = ({ projectDetails }: PartialProps) => (
 );
 
 interface TagPillProps extends PropsWithChildren {
-  beforeContent: string;
   className: string;
 }
-const TagPill = ({ beforeContent, className, children }: TagPillProps) => (
+const TagPill = ({ className, children }: TagPillProps) => (
   <div
-    className={`px-4 py-1 rounded-full text-white font-semibold text-sm before:content-['${beforeContent}'] before:mr-1 ${className}`}
+    className={`px-4 py-1 rounded-full text-white font-semibold text-sm before:mr-1 ${className}`}
   >
     {children}
   </div>
@@ -86,8 +85,7 @@ const DetailedMisc = ({ projectDetails }: PartialProps) => (
           {projectDetails.languages.map((language) => (
             <TagPill
               key={language}
-              beforeContent="@"
-              className="bg-special-orange"
+              className="bg-special-orange before:content-['@']"
             >
               {language}
             </TagPill>
@@ -102,8 +100,7 @@ const DetailedMisc = ({ projectDetails }: PartialProps) => (
           {projectDetails.techStacks.map((techStack) => (
             <TagPill
               key={techStack}
-              beforeContent="#"
-              className="bg-special-blue"
+              className="bg-special-blue before:content-['#']"
             >
               {techStack}
             </TagPill>
