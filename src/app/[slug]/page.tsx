@@ -7,6 +7,7 @@ import BigLinkButton from "@/components/BigLinkButton";
 import VersionHistory from "@/components/VersionHistory";
 import type { ProjectDetailedInfo } from "@/types/project";
 import type { PropsWithChildren } from "react";
+import PoweredBy from "@/components/PoweredBy";
 
 interface PartialProps {
   projectDetails: ProjectDetailedInfo;
@@ -156,17 +157,7 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
       </div>
 
       {/*页脚信息*/}
-      <div className="mt-12 text-sm text-gray-400 w-full text-center">
-        由{" "}
-        <a
-          className="underline underline-offset-2"
-          href="https://candymade.net/candymade/"
-          target="_blank"
-        >
-          CandyMade
-        </a>{" "}
-        强力驱动
-      </div>
+      <PoweredBy />
     </main>
   );
 };
