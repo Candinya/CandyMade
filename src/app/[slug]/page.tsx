@@ -163,7 +163,7 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
         由{" "}
         <a
           className="underline underline-offset-2"
-          href="https://candymade.net"
+          href="https://candymade.net/candymade/"
           target="_blank"
         >
           CandyMade
