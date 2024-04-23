@@ -12,6 +12,7 @@ export type ProjectBasicInfo = {
   slogan: string;
   logo: string;
   sourceRepo: string | null;
+  license: string | null;
   startFrom: Date;
   type: ProjectType;
   isPublished: boolean;

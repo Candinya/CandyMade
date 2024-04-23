@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <Link
       href={`/${project.id}`}
-      className="grid relative group border-b border-gray-200 bg-white shadow-md hover:bg-gray-50 hover:shadow-lg transition-all px-4 py-5 sm:px-6 rounded-lg overflow-hidden"
+      className="flex flex-col relative group border-b border-gray-200 bg-white shadow-md hover:bg-gray-50 hover:shadow-lg transition-all px-4 py-5 sm:px-6 rounded-lg overflow-hidden"
     >
       {/*项目 Logo 和 名称*/}
       <div className="flex flex-wrap items-center gap-4 sm:flex-nowrap">
@@ -62,12 +62,18 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             <span className="font-semibold">支持平台</span>
             <span>{TranslationProjectType[project.type]}</span>
           </li>
+          {project.license && (
+            <li className="flex justify-between mt-2">
+              <span className="font-semibold">许可证</span>
+              <span>{project.license}</span>
+            </li>
+          )}
         </ul>
       </div>
 
       {/*是否正在开发*/}
       {!project.isPublished && (
-        <div className="absolute w-full h-full">
+        <div className="absolute w-full h-full top-0 left-0">
           <div className="w-full h-full bg-yellow-800 opacity-75" />
           <ConfidentialBar className="rotate-30 px-72 top-8 -right-60" />
           <ConfidentialBar className="rotate-45 px-72 top-1/2 -left-1/3 lg:hidden" />

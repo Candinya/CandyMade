@@ -6,6 +6,7 @@ export const Basic: ProjectBasicInfo = {
   slogan: "这是一个模板项目，您可以自由修改它",
   logo: "/assets/logos/candymade.svg",
   sourceRepo: null,
+  license: null,
   startFrom: new Date("2024-04-22"),
   type: "Web",
   isPublished: false,

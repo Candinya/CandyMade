@@ -6,6 +6,7 @@ export const Basic: ProjectBasicInfo = {
   slogan: "Request, Query, Normalize",
   logo: "/assets/logos/requeen.png",
   sourceRepo: null,
+  license: null,
   startFrom: new Date("2024-04-21"),
   type: "AllPlatform",
   isPublished: false,

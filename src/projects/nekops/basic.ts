@@ -6,6 +6,7 @@ export const Basic: ProjectBasicInfo = {
   slogan: "Ops' now nyaing",
   logo: "/assets/logos/nekops.png",
   sourceRepo: null,
+  license: null,
   startFrom: new Date("2023-12-01"),
   type: "Desktop",
   isPublished: true,
