@@ -1,4 +1,12 @@
+<div align="center">
+
+<img src="./public/assets/logos/candymade.svg" width="120" height="120" alt="CandyMade Logo"/>
+
+</div>
+
 # CandyMade
+
+简单，清晰，干净的项目展示页
 
 ## 开始使用
 
