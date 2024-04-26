@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <Link
       href={`/${project.id}`}
-      className="flex flex-col relative group border-b border-gray-200 bg-white shadow-md hover:bg-gray-50 hover:shadow-lg transition-all px-4 py-5 sm:px-6 rounded-lg overflow-hidden"
+      className="flex flex-col relative group border-b border-gray-200 dark:border-gray-600 bg-white dark:bg-slate-800 drop-shadow-lg shadow-gray-200 dark:shadow-gray-600 hover:bg-gray-50 dark:hover:bg-slate-750 hover:drop-shadow-xl transition-all px-4 py-5 sm:px-6 rounded-lg overflow-hidden"
     >
       {/*项目 Logo 和 名称*/}
       <div className="flex flex-wrap items-center gap-4 sm:flex-nowrap">
@@ -23,10 +23,12 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={project.name}
         />
         <div className="">
-          <h3 className="text-lg font-semibold leading-6 text-gray-900">
+          <h3 className="text-lg font-semibold leading-6 text-gray-900 dark:text-slate-100">
             {project.name}
           </h3>
-          <p className="mt-1 text-sm text-gray-500">{project.slogan}</p>
+          <p className="mt-1 text-sm text-gray-500 dark:text-slate-400">
+            {project.slogan}
+          </p>
         </div>
       </div>
 
@@ -34,13 +36,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="absolute bottom-1 right-2">
         <IconProjectType
           type={project.type}
-          className="w-24 h-24 text-gray-200"
+          className="w-24 h-24 text-gray-200 dark:text-slate-700"
         />
       </div>
 
       {/*开源图标*/}
       {project.sourceRepo && (
-        <div className="absolute top-3 -right-9 text-white bg-green-500 font-semibold text-lg px-12 py-1 rotate-45">
+        <div className="absolute top-3 -right-9 text-white dark:text-slate-800 bg-green-500 font-semibold text-lg px-12 py-1 rotate-45">
           开源
         </div>
       )}
@@ -48,7 +50,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       {/*项目基本信息*/}
       <Divider />
 
-      <div className="relative">
+      <div className="relative text-slate-900 dark:text-white">
         <ul>
           <li className="flex justify-between">
             <span className="font-semibold">初次提交</span>

@@ -6,8 +6,8 @@ import { IconProjectPlatform } from "@/icons";
 import BigLinkButton from "@/components/BigLinkButton";
 import VersionHistory from "@/components/VersionHistory";
 import type { ProjectDetailedInfo } from "@/types/project";
-import type { PropsWithChildren } from "react";
 import PoweredBy from "@/components/PoweredBy";
+import TagPill from "@/components/TagPill";
 
 interface PartialProps {
   projectDetails: ProjectDetailedInfo;
@@ -21,29 +21,20 @@ const LogoTitle = ({ projectDetails }: PartialProps) => (
         src={projectDetails.logo}
         alt={projectDetails.name}
       />
-      <h2 className="mt-6 text-4xl font-semibold">{projectDetails.name}</h2>
-      <p className="mt-4 text-xl leading-8 text-gray-600">
+      <h2 className="mt-6 text-4xl font-semibold text-gray-900 dark:text-slate-100">
+        {projectDetails.name}
+      </h2>
+      <p className="mt-4 text-xl leading-8 text-gray-600 dark:text-slate-400">
         {projectDetails.slogan}
       </p>
     </div>
   </div>
 );
 
-interface TagPillProps extends PropsWithChildren {
-  className: string;
-}
-const TagPill = ({ className, children }: TagPillProps) => (
-  <div
-    className={`px-4 py-1 rounded-full text-white font-semibold text-sm before:mr-1 ${className}`}
-  >
-    {children}
-  </div>
-);
-
 const DetailedMisc = ({ projectDetails }: PartialProps) => (
-  <div className="grid grid-cols-1 lg:grid-cols-3 divide-x divide-dashed">
+  <div className="grid grid-cols-1 lg:grid-cols-3 divide-x divide-dashed divide-gray-300 dark:divide-slate-500">
     {/*详细介绍*/}
-    <div className="col-span-2 px-6 py-4 my-4 border-l-8 border-gray-200">
+    <div className="col-span-2 px-6 py-4 my-4 border-l-8 border-gray-200 dark:border-slate-600">
       <p className="whitespace-pre-wrap">
         {projectDetails.introduction.trim()}
       </p>
@@ -128,7 +119,7 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
         <LogoTitle projectDetails={projectDetails} />
 
         {/*详细信息*/}
-        <div className="bg-white shadow-md px-4 pt-1 pb-5 sm:px-6 rounded-lg">
+        <div className="bg-white dark:bg-slate-800 shadow-md px-4 pt-1 pb-5 sm:px-6 rounded-lg">
           {/*屏幕截图*/}
           {projectDetails.screenshots.length > 0 && (
             <>

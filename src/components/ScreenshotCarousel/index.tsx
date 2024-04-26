@@ -47,7 +47,7 @@ const ScreenshotCarousel = ({ screenshots }: ScreenshotCarouselProps) => {
   }, []);
 
   return (
-    <div className="relative w-full rounded-lg overflow-hidden bg-gray-800 group">
+    <div className="relative w-full rounded-lg overflow-hidden bg-gray-600 dark:bg-slate-900 group">
       {/*图片*/}
       <div className="relative h-96 lg:h-128">
         {screenshots.map((screenshot, index) => (
@@ -60,7 +60,7 @@ const ScreenshotCarousel = ({ screenshots }: ScreenshotCarouselProps) => {
       </div>
 
       {/*标题*/}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-sm text-white dark:text-gray-800 rounded-lg px-3 py-1 bg-white/30 opacity-0 transition-opacity dark:bg-gray-800/30 group-hover:opacity-100">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-sm text-gray-800 dark:text-white rounded-lg px-3 py-1 bg-white dark:bg-slate-800 opacity-0 transition-opacity group-hover:opacity-100">
         {screenshots[currentActiveImageIndex].title}
       </div>
 
