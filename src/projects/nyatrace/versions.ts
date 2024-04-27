@@ -2,6 +2,31 @@ import type { ProjectVersionHistory } from "@/types/project";
 
 export const VersionHistory: ProjectVersionHistory[] = [
   {
+    version: "0.2.0.0",
+    releaseDate: new Date("Apr 27, 2024, 5:13 PM GMT+8"),
+    releaseNote: `
+## ⚠️ 注意
+
+这是一个 breaking change ，可能会对您的过去的操作逻辑习惯造成一定的冲击，如果您觉得新的逻辑习惯起来很困难，可能您还是需要再使用先前的发布版本。但它们不会再继续维护。
+
+## 🍰 更新内容
+
+1. 升级到 Qt 6 ，支持 High DPI 缩放
+2. 重构界面逻辑，将地图模块放到单独的窗口中，并新增 \`设置\` \`日志\` \`关于\` 三个功能窗口
+3. 支持配置文件的读写，引入更多可以调整的配置选项
+4. 将日志输出到日志窗口以便阅读和分析
+5. 重构 QML 部分结构，调整组件并提升代码直观度
+6. 代码结构优化与调整
+7. 将 IP 数据库设置为可选项，没有数据库也不影响解析和追踪
+8. 修复构建流水线找不到 \`vc_redist.x64.exe\` 的问题
+
+## 💡 下一步的开发计划
+
+- 支持 Windows 之外的平台（ macOS 和 Linux ）
+- 支持 ICMP 之外的路由追踪方式，如 TCP 和 UDP 等
+`,
+  },
+  {
     version: "0.1.10.0",
     releaseDate: new Date("2024-04-21"),
     releaseNote: `
