@@ -1,5 +1,5 @@
 import type { ProjectVersionHistory } from "@/types/project";
-import { roughAgo } from "@/utils/roughAgo";
+import RoughAgo from "@/components/RoughAgo";
 
 interface VersionHistoryProps {
   versionHistory: ProjectVersionHistory[];
@@ -28,12 +28,9 @@ const VersionHistory = ({ versionHistory }: VersionHistoryProps) => (
                 {versionItem.version}
               </span>
             </div>
-            <time
-              dateTime={versionItem.releaseDate.toISOString()}
-              className="flex-none py-0.5 text-xs leading-5 text-gray-500 dark:text-slate-400"
-            >
-              {roughAgo(versionItem.releaseDate)}前
-            </time>
+            <div className="py-0.5 text-xs leading-5 text-gray-500 dark:text-slate-400">
+              <RoughAgo date={versionItem.releaseDate} />
+            </div>
           </div>
           <p className="text-sm leading-6 text-gray-500 dark:text-slate-400 whitespace-pre-wrap">
             {versionItem.releaseNote.trim()}
