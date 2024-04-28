@@ -3,6 +3,7 @@ import { Basic } from "./basic";
 import { Introduction } from "./intro";
 import { ScreenShots } from "./screenshots";
 import { VersionHistory } from "./versions";
+import { Downloads } from "./downloads";
 
 export const Details: ProjectDetailedInfo = {
   ...Basic,
@@ -10,7 +11,7 @@ export const Details: ProjectDetailedInfo = {
   platforms: ["Windows", "macOS", "Linux"],
   techStacks: ["Tauri", "Vite", "React", "TypeScript"],
   languages: ["English"],
-  downloadLink: null,
   screenshots: ScreenShots,
+  downloads: Downloads,
   versionHistory: VersionHistory,
 };

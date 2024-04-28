@@ -52,13 +52,14 @@ const DetailedMisc = ({ projectDetails }: PartialProps) => (
       )}
 
       {/*下载链接*/}
-      {projectDetails.downloadLink && (
+      {projectDetails.downloads.map((download) => (
         <BigLinkButton
-          href={projectDetails.downloadLink}
-          text="下载"
+          key={download.url}
+          href={download.url}
+          text={download.text || "下载"}
           className={"bg-blue-500 hover:bg-blue-400"}
         />
-      )}
+      ))}
 
       <div className="my-1 py-1">
         <Divider label="系统支持" my="mb-2" />

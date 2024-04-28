@@ -29,12 +29,17 @@ export type ProjectVersionHistory = {
   releaseNote: string;
 };
 
+export type ProjectDownload = {
+  text?: string;
+  url: string;
+};
+
 export type ProjectDetailedInfo = ProjectBasicInfo & {
   introduction: string;
   platforms: ProjectPlatform[];
   techStacks: string[];
   languages: string[];
   screenshots: ProjectScreenShot[];
-  downloadLink: string | null;
+  downloads: ProjectDownload[];
   versionHistory: ProjectVersionHistory[];
 };
