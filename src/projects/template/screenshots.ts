@@ -1,3 +1,3 @@
 import type { ProjectScreenShot } from "@/types/project";
 
-export const ScreenShot: ProjectScreenShot[] = [];
+export const ScreenShots: ProjectScreenShot[] = [];

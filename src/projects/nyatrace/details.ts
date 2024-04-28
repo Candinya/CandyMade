@@ -1,7 +1,7 @@
 import type { ProjectDetailedInfo } from "@/types/project";
 import { Basic } from "./basic";
 import { Introduction } from "./intro";
-import { ScreenShot } from "./screenshots";
+import { ScreenShots } from "./screenshots";
 import { VersionHistory } from "./versions";
 
 export const Details: ProjectDetailedInfo = {
@@ -10,7 +10,7 @@ export const Details: ProjectDetailedInfo = {
   platforms: ["Windows"],
   techStacks: ["Qt", "C++"],
   languages: ["简体中文"],
-  screenshots: ScreenShot,
   downloadLink: "https://github.com/Candinya/NyaTrace/releases/latest",
+  screenshots: ScreenShots,
   versionHistory: VersionHistory,
 };

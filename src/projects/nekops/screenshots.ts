@@ -1,6 +1,6 @@
 import type { ProjectScreenShot } from "@/types/project";
 
-export const ScreenShot: ProjectScreenShot[] = [
+export const ScreenShots: ProjectScreenShot[] = [
   {
     imageUrl: "/assets/screenshots/nekops/ssh-page.png",
     title: "SSH 连接列表",
