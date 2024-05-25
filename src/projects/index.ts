@@ -1,4 +1,8 @@
 import type { ProjectBasicInfo, ProjectDetailedInfo } from "@/types/project";
+import {
+  KratosRebirthBasic,
+  KratosRebirthDetails,
+} from "@/projects/kratos-rebirth";
 import { NyaTraceBasic, NyaTraceDetails } from "@/projects/nyatrace";
 import { NekopsBasic, NekopsDetails } from "@/projects/nekops";
 import { ReQueenBasic, ReQueenDetails } from "@/projects/requeen";
@@ -6,6 +10,7 @@ import { CandyMadeBasic, CandyMadeDetails } from "@/projects/candymade";
 
 // 这个会被主页展示使用
 export const AllProjectsBasic: ProjectBasicInfo[] = [
+  KratosRebirthBasic,
   NyaTraceBasic,
   NekopsBasic,
   ReQueenBasic,
@@ -14,6 +19,7 @@ export const AllProjectsBasic: ProjectBasicInfo[] = [
 
 // 这个会用来生成各个子页面的详细信息
 export const AllProjectsDetails: ProjectDetailedInfo[] = [
+  KratosRebirthDetails,
   NyaTraceDetails,
   NekopsDetails,
   ReQueenDetails,
