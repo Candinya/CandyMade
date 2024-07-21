@@ -2,6 +2,16 @@ import type { ProjectVersionHistory } from "@/types/project";
 
 export const VersionHistory: ProjectVersionHistory[] = [
   {
+    version: "0.2.0",
+    releaseDate: new Date("2024-07-19"),
+    releaseNote: `
+1. 取消仅限一个实例的限制逻辑
+2. 当不止一个窗口存在时，关闭主窗口的操作会被变成最小化
+3. 重构群控逻辑
+4. 依赖升级更新
+`,
+  },
+  {
     version: "0.1.1",
     releaseDate: new Date("2024-04-21"),
     releaseNote: "优化窗口控制逻辑",
