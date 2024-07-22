@@ -2,6 +2,16 @@ import type { ProjectVersionHistory } from "@/types/project";
 
 export const VersionHistory: ProjectVersionHistory[] = [
   {
+    version: "0.2.1",
+    releaseDate: new Date("2024-07-22"),
+    releaseNote: `
+1. 不再计划移动端支持，固定侧边导航栏位置
+2. 修复 SSH 需要换行才能输出的问题
+3. 调整特殊字符弹出卡片的位置
+4. 添加代码高亮编辑器
+`,
+  },
+  {
     version: "0.2.0",
     releaseDate: new Date("2024-07-19"),
     releaseNote: `
