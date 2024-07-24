@@ -2,6 +2,15 @@ import type { ProjectVersionHistory } from "@/types/project";
 
 export const VersionHistory: ProjectVersionHistory[] = [
   {
+    version: "0.2.2",
+    releaseDate: new Date("2024-07-24"),
+    releaseNote: `
+1. 优化群控代码发送逻辑
+2. 优化群控表格设计
+3. 移除无用的首页
+`,
+  },
+  {
     version: "0.2.1",
     releaseDate: new Date("2024-07-22"),
     releaseNote: `
