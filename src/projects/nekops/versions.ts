@@ -2,6 +2,15 @@ import type { ProjectVersionHistory } from "@/types/project";
 
 export const VersionHistory: ProjectVersionHistory[] = [
   {
+    version: "0.2.3",
+    releaseDate: new Date("2024-07-27"),
+    releaseNote: `
+1. 调整 Multirun 页面 Special Chars 功能展开图标
+2. 优化 SSH 页面的右键菜单定位
+3. 去掉了不再使用的依赖项
+`,
+  },
+  {
     version: "0.2.2",
     releaseDate: new Date("2024-07-24"),
     releaseNote: `
