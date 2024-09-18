@@ -5,7 +5,6 @@ import {
 } from "@/projects/kratos-rebirth";
 import { NyaTraceBasic, NyaTraceDetails } from "@/projects/nyatrace";
 import { NekopsBasic, NekopsDetails } from "@/projects/nekops";
-import { ReQueenBasic, ReQueenDetails } from "@/projects/requeen";
 import { CandyMadeBasic, CandyMadeDetails } from "@/projects/candymade";
 
 // 这个会被主页展示使用
@@ -13,7 +12,6 @@ export const AllProjectsBasic: ProjectBasicInfo[] = [
   KratosRebirthBasic,
   NyaTraceBasic,
   NekopsBasic,
-  ReQueenBasic,
   CandyMadeBasic,
 ];
 
@@ -22,7 +20,6 @@ export const AllProjectsDetails: ProjectDetailedInfo[] = [
   KratosRebirthDetails,
   NyaTraceDetails,
   NekopsDetails,
-  ReQueenDetails,
   CandyMadeDetails,
 ];
 
