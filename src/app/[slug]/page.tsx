@@ -105,11 +105,12 @@ const DetailedMisc = ({ projectDetails }: PartialProps) => (
 );
 
 interface ProjectPageProps {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-const ProjectPage = ({ params }: ProjectPageProps) => {
+const ProjectPage = async (props: ProjectPageProps) => {
+  const params = await props.params;
   const { slug } = params;
   const projectDetails = AllProjectsIDMap[slug];
 
@@ -155,9 +156,10 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
 };
 
 export const generateMetadata = async (
-  { params, searchParams }: ProjectPageProps,
+  props: ProjectPageProps,
   parent: ResolvingMetadata,
 ): Promise<Metadata> => {
+  const params = await props.params;
   // read route params
   const { slug } = params;
   const projectDetails = AllProjectsIDMap[slug];
