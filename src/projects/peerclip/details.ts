@@ -1,0 +1,17 @@
+import type { ProjectDetailedInfo } from "@/types/project";
+import { Basic } from "./basic";
+import { Introduction } from "./intro";
+import { ScreenShots } from "./screenshots";
+import { VersionHistory } from "./versions";
+import { Downloads } from "./downloads";
+
+export const Details: ProjectDetailedInfo = {
+  ...Basic,
+  introduction: Introduction,
+  platforms: ["Windows", "macOS", "Linux"],
+  techStacks: ["Wails", "Go", "React", "TypeScript", "TailwindCSS", "motion"],
+  languages: ["无语言"],
+  screenshots: ScreenShots,
+  downloads: Downloads,
+  versionHistory: VersionHistory,
+};
