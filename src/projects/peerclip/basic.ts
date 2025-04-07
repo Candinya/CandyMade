@@ -6,7 +6,7 @@ export const Basic: ProjectBasicInfo = {
   slogan: "一个简单的 P2P 剪贴板",
   logo: "/assets/logos/peerclip.png",
   sourceRepo: "https://github.com/Candinya/PeerClip",
-  license: null,
+  license: "MIT",
   startFrom: new Date("2025-02-20"),
   type: "Desktop",
   isPublished: true,
