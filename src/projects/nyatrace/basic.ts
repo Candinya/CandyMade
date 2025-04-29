@@ -6,7 +6,7 @@ export const Basic: ProjectBasicInfo = {
   slogan: "可视化路由追踪",
   logo: "/assets/logos/nyatrace.svg",
   sourceRepo: "https://github.com/Candinya/NyaTrace",
-  license: "AGPL-3.0 (改)",
+  license: "GPL-3.0",
   startFrom: new Date("2022-12-01"),
   type: "Desktop",
   isPublished: true,
